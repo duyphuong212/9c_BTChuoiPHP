@@ -1,0 +1,17 @@
+<?php
+// Hàm chuyển đổi thời gian từ giây sang giờ, phút, giây
+function convert_time($seconds) {
+    $hours = floor($seconds / 3600);
+    $minutes = floor(($seconds % 3600) / 60);
+    $remaining_seconds = $seconds % 60;
+
+    return array($hours, $minutes, $remaining_seconds);
+}
+
+// Nhập thời gian tính bằng giây từ bàn phím
+$time_in_seconds = readline("Nhập thời gian tính bằng giây: ");
+
+// Gọi hàm convert_time và in ra kết quả
+list($hours, $minutes, $seconds) = convert_time($time_in_seconds);
+echo "Thời gian: $hours giờ, $minutes phút, $seconds giây";
+?>
