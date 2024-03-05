@@ -1,0 +1,25 @@
+<?php
+// Hàm giải phương trình bậc I
+function giai_phuong_trinh_bac_I($a, $b) {
+    // Nếu a = 0 và b = 0
+    if ($a == 0 && $b == 0) {
+        return "Phương trình vô số nghiệm";
+    }
+    // Nếu a = 0 và b khác 0
+    elseif ($a == 0 && $b != 0) {
+        return "Phương trình vô nghiệm";
+    }
+    // Nếu a khác 0
+    else {
+        $x = -$b / $a;
+        return "Nghiệm của phương trình là x = $x";
+    }
+}
+
+// Nhập hệ số a và b từ bàn phím
+$a = readline("Nhập hệ số a: ");
+$b = readline("Nhập hệ số b: ");
+
+// Gọi hàm giai_phuong_trinh_bac_I và in ra kết quả
+echo giai_phuong_trinh_bac_I($a, $b);
+?>
