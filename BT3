@@ -1,0 +1,13 @@
+<?php
+// Hàm chuyển đổi nhiệt độ từ Fahrenheit sang Celsius
+function fahrenheit_to_celsius($fahrenheit) {
+    $celsius = (5 / 9) * ($fahrenheit - 32);
+    return $celsius;
+}
+
+// Nhập nhiệt độ theo độ Fahrenheit từ bàn phím
+$fahrenheit = readline("Nhập nhiệt độ Fahrenheit: ");
+
+// Gọi hàm fahrenheit_to_celsius và in ra kết quả
+echo "Nhiệt độ tương đương theo độ Celsius: " . fahrenheit_to_celsius($fahrenheit) . " °C";
+?>
