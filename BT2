@@ -1,0 +1,22 @@
+<?php
+// Hàm tính phần dư của a chia b
+function remainder($a, $b) {
+    if ($b == 0) {
+        return "Không thể chia cho 0";
+    } else {
+        return $a % $b;
+    }
+}
+
+// Nhập hai số nguyên dương a và b từ bàn phím
+$a = readline("Nhập số nguyên dương a: ");
+$b = readline("Nhập số nguyên dương b: ");
+
+// Kiểm tra nếu cả hai số a và b đều là số nguyên dương
+if ($a > 0 && $b > 0) {
+    // Gọi hàm remainder và in ra kết quả
+    echo "Kết quả của phép chia lấy phần dư của $a chia $b là: " . remainder($a, $b);
+} else {
+    echo "Vui lòng nhập vào hai số nguyên dương.";
+}
+?>
