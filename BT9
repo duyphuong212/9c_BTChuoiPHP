@@ -1,0 +1,18 @@
+<?php
+// Đọc dữ liệu đầu vào từ bàn phím
+$N = intval(readline()); // Số lượng số từ 1 đến N
+$missing_number = 0; // Biến để lưu số còn thiếu
+
+// Đọc dãy số đã cho và tính tổng của chúng
+$given_numbers = explode(" ", readline());
+$sum_given_numbers = array_sum($given_numbers);
+
+// Tính tổng của tất cả các số từ 1 đến N
+$total_sum = $N * ($N + 1) / 2;
+
+// Số còn thiếu sẽ là hiệu của tổng chung và tổng của các số đã cho
+$missing_number = $total_sum - $sum_given_numbers;
+
+// In ra số còn thiếu
+echo $missing_number;
+?>
