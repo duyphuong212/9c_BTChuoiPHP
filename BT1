@@ -1,0 +1,17 @@
+# 9c_BTChuoiPHP
+<?php
+// Hàm tính giá trị tuyệt đối của số nguyên n
+function absolute_value($n) {
+    if ($n < 0) {
+        return -$n;
+    } else {
+        return $n;
+    }
+}
+
+// Nhập số nguyên n từ bàn phím
+$n = readline("Nhập số nguyên n: ");
+
+// Gọi hàm absolute_value và in ra kết quả
+echo "Giá trị tuyệt đối của " . $n . " là: " . absolute_value($n);
+?>
