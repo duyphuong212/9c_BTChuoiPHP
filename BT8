@@ -1,0 +1,23 @@
+<?php
+// Hàm thực hiện thuật toán chuyển đổi số nguyên N
+function algorithm($N) {
+    $result = array();
+    while ($N != 1) {
+        $result[] = $N;
+        if ($N % 2 == 0) {
+            $N = $N / 2;
+        } else {
+            $N = $N * 3 + 1;
+        }
+    }
+    $result[] = 1; // Thêm 1 vào cuối danh sách kết quả
+    return $result;
+}
+
+// Nhập số nguyên dương N từ bàn phím
+$N = readline("Nhập số nguyên dương N: ");
+
+// Gọi hàm algorithm và in ra kết quả
+$result = algorithm($N);
+echo implode(' ', $result);
+?>
