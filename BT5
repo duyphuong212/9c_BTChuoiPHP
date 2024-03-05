@@ -1,0 +1,24 @@
+<?php
+// Hàm tìm giá trị lớn nhất
+function max_of_three($a, $b, $c) {
+    $max_value = $a;
+
+    if ($b > $max_value) {
+        $max_value = $b;
+    }
+
+    if ($c > $max_value) {
+        $max_value = $c;
+    }
+
+    return $max_value;
+}
+
+// Nhập ba số nguyên a, b, c từ bàn phím
+$a = readline("Nhập số nguyên a: ");
+$b = readline("Nhập số nguyên b: ");
+$c = readline("Nhập số nguyên c: ");
+
+// Gọi hàm max_of_three và in ra giá trị lớn nhất
+echo "Giá trị lớn nhất là: " . max_of_three($a, $b, $c);
+?>
